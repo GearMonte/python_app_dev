@@ -1,2 +1,2 @@
 import matplotlib.pyplot as plt
-from data import
+from data import in_st
