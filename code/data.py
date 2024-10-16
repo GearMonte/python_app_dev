@@ -6,7 +6,7 @@ in_co = r'C:\Users\Justin\OneDrive\Desktop\Python\python_app_dev\data\IN_covid_r
 
 # Statewide dataset
 in_st = pd.read_csv(in_st)
-# print(in_st.head())
+print(in_st.head())
 
 # County dataset
 in_co = pd.read_csv(in_co)
