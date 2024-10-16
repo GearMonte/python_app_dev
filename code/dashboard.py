@@ -18,4 +18,4 @@ ax2.set_title('Indiana County: Covid 19 Deaths by County')
 plt.show()
 
 fig3, ax3 = plt.subplots()
-ax3.pie(in_st.)
+ax3.pie(in_st.col)
