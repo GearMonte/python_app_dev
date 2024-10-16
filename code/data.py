@@ -10,4 +10,4 @@ in_st = pd.read_csv(in_st)
 
 # County dataset
 in_co = pd.read_csv(in_co)
-print(in_co.head())
+# print(in_co.head())
