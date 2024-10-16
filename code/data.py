@@ -15,12 +15,12 @@ print(in_st.head())
 in_co = pd.read_csv(in_co)
 # print(in_co.head())
 
-st_20 = rin_st = r'C:\Users\Justin\OneDrive\Desktop\Python\python_app_dev\data\IN_covid19_20-23.csv'
-st_20 = pd.read_csv(st_20)
+spark = SparkSession.builder.appName("IN_State_Covid_data").getOrCreate()
+st_20 = spark.read.csv('C:\Users\Justin\OneDrive\Desktop\Python\python_app_dev\data\IN_covid19_20-23.csv',
+                       header=True, inferSchma=True)
 
 st_date = '2/26/2020'
 end_date = '12/31/2020'
 
-st_20_filtered = st_20 \
-                .filter(col('DATE') >= st_date) & (col('DATE') <= end_date)
-print(st_20_filtered)
+st_20 = st_20.filter(col('DATE') >= st_date) & (col('DATE') <= end_date)
+st_20.show()
