@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from data import in_st #, in_co
+from data import in_st, in_co
 
 # Step 1: Create your plots using matplotlib
 # Updating your color scheme:
