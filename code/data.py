@@ -9,16 +9,17 @@ in_co = r'C:\Users\Justin\OneDrive\Desktop\Python\python_app_dev\data\IN_covid_r
 
 # Statewide dataset
 in_st = pd.read_csv(in_st)
-print(in_st.head())
+# print(in_st.head())
 
 # County dataset
 in_co = pd.read_csv(in_co)
 # print(in_co.head())
 
 spark = SparkSession.builder.appName("IN_State_Covid_data").getOrCreate()
-st_20 = spark.read.csv('C:\Users\Justin\OneDrive\Desktop\Python\python_app_dev\data\IN_covid19_20-23.csv',
-                       header=True, inferSchma=True)
+st_20 = spark.read.csv(r'C:\Users\Justin\OneDrive\Desktop\Python\python_app_dev\data\IN_covid19_20-23.csv', header=True, inferSchma=True)
 
+# st_date = '2/26/2020'
+# end_date = '12/31/2020'
 st_date = '2/26/2020'
 end_date = '12/31/2020'
 
